@@ -1,13 +1,33 @@
 import React, { useState, useEffect } from 'react'
 import './timer.css'
 
+const tipoBoton = {
+  pomodoro: 'pomodoro',
+  descanso: 'descanso',
+  descansoLargo: 'descansoLargo'
+}
+
 function Timer() {
-  const [time, setTime] = useState(1 * 60) // Tiempo inicial en segundos
-  const [running, setRunning] = useState(false) // Estado de ejecución del temporizador
+  const [time, setTime] = useState(20 * 60)
+  const [running, setRunning] = useState(false)
+  const [botonSeleccionado, setBotonSeleccionado] = useState(tipoBoton.pomodoro)
 
   useEffect(() => {
+    if (botonSeleccionado === tipoBoton.pomodoro) {
+      setTime(20 * 60)
+      setRunning(false)
+    }
+    if (botonSeleccionado === tipoBoton.descanso) {
+      setTime(5 * 60)
+      setRunning(false)
+    }
+    if (botonSeleccionado === tipoBoton.descansoLargo) {
+      setTime(10 * 60)
+      setRunning(false)
+    }
+  }, [botonSeleccionado])
+  useEffect(() => {
     let intervalId
-
     if (running && time > 0) {
       intervalId = setInterval(() => {
         setTime((time) => time - 1)
@@ -39,9 +59,42 @@ function Timer() {
     <div className='container'>
       <div className='timer-container'>
         <div className='timer-opciones'>
-          <button className='btn-opciones'>Pomodoro</button>
-          <button className='btn-opciones'>Descanso</button>
-          <button className='btn-opciones'>Descanso Largo</button>
+          <button
+            className={
+              botonSeleccionado === 'pomodoro'
+                ? 'btn-opcion-selected'
+                : 'btn-opciones'
+            }
+            onClick={() => {
+              setBotonSeleccionado(tipoBoton.pomodoro)
+            }}
+          >
+            Pomodoro
+          </button>
+          <button
+            className={
+              botonSeleccionado === 'descanso'
+                ? 'btn-opcion-selected'
+                : 'btn-opciones'
+            }
+            onClick={() => {
+              setBotonSeleccionado(tipoBoton.descanso)
+            }}
+          >
+            Descanso
+          </button>
+          <button
+            className={
+              botonSeleccionado === 'descansoLargo'
+                ? 'btn-opcion-selected'
+                : 'btn-opciones'
+            }
+            onClick={() => {
+              setBotonSeleccionado(tipoBoton.descansoLargo)
+            }}
+          >
+            Descanso Largo
+          </button>
         </div>
         <h1 className='minutes'>{formatTime(time)}</h1>
         {!running && (

@@ -39,8 +39,14 @@
     cursor: auto;
 }
 
+.btn-opcion-selected{
+    background-color: #10284c;
+    cursor: auto;
+}
+
 .btn-opciones:hover{
     border-color: transparent;
+    border-color: #fff;
     background-color: #10284c ;
     color: white;
 }

@@ -5,6 +5,19 @@
   text-align: center;
 }
 
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  color: rgba(255, 255, 255, 0.87);
+  --first-color: #081426;
+  --second-color: #0B5563;
+  --third-color: #5F4B66;
+  background-color: var(--first-color);
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
