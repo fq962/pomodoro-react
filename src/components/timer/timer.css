@@ -1,0 +1,80 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 380px;
+    width: 480px;
+
+}
+.timer-container {
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.minutes {
+    font-size: 8rem;
+    font-weight: 700;
+    color: #fff;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.timer-opciones{
+    display: inline-flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.btn-opciones{
+    background-color: transparent;
+    cursor: auto;
+}
+
+.btn-opciones:hover{
+    border-color: transparent;
+    background-color: #10284c ;
+    color: white;
+}
+
+.btn-start{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: none;
+    cursor: auto;
+}
+
+.btn-start:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
+
+.btn-stop{
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: none;
+    cursor: auto;
+}
+
+.btn-stop:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease-in-out;
+}
