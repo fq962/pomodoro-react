@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { useTimerConfig } from '../../hooks/useTimerConfig'
 import { tipoBoton } from '../models/tipoBotonModel'
 import './timer.css'
 
 function Timer() {
+  const audioRef = useRef(null)
   const {
     time,
     botonSeleccionado,
@@ -11,9 +12,8 @@ function Timer() {
     formatTime,
     handleStart,
     handleStop,
-    running,
-    audioRef
-  } = useTimerConfig()
+    running
+  } = useTimerConfig(audioRef)
 
   return (
     <div className='container'>

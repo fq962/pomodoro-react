@@ -1,8 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { tipoBoton } from '../components/models/tipoBotonModel'
 
-export const useTimerConfig = () => {
-  const audioRef = useRef(null)
+export const useTimerConfig = (audioRef) => {
   const [time, setTime] = useState(20 * 60)
   const [running, setRunning] = useState(false)
   const [botonSeleccionado, setBotonSeleccionado] = useState(tipoBoton.pomodoro)
