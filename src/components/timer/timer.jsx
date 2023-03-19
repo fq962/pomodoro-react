@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef } from 'react'
 import './timer.css'
 
 const tipoBoton = {
@@ -8,6 +8,7 @@ const tipoBoton = {
 }
 
 function Timer() {
+  const audioRef = useRef(null)
   const [time, setTime] = useState(20 * 60)
   const [running, setRunning] = useState(false)
   const [botonSeleccionado, setBotonSeleccionado] = useState(tipoBoton.pomodoro)
@@ -31,6 +32,9 @@ function Timer() {
     if (running && time > 0) {
       intervalId = setInterval(() => {
         setTime((time) => time - 1)
+        if (time === 1) {
+          audioRef.current.play()
+        }
       }, 1000)
     } else {
       clearInterval(intervalId)
@@ -107,6 +111,7 @@ function Timer() {
             Reiniciar
           </button>
         )}
+        <audio ref={audioRef} src='src/assets/finish_alert.wav' />
       </div>
     </div>
   )
