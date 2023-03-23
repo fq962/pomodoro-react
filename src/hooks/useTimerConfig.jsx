@@ -11,14 +11,29 @@ export const useTimerConfig = (audioRef) => {
     if (botonSeleccionado === tipoBoton.pomodoro) {
       setTime(20 * 60)
       setRunning(false)
+      const body = document.querySelector('body')
+      body.classList.remove('descanso')
+      body.classList.remove('descanso-largo')
+      body.classList.remove('pomodoro')
+      body.classList.add('pomodoro')
     }
     if (botonSeleccionado === tipoBoton.descanso) {
       setTime(5 * 60)
       setRunning(false)
+      const body = document.querySelector('body')
+      body.classList.remove('descanso')
+      body.classList.remove('descanso-largo')
+      body.classList.remove('pomodoro')
+      body.classList.add('descanso')
     }
     if (botonSeleccionado === tipoBoton.descansoLargo) {
       setTime(10 * 60)
       setRunning(false)
+      const body = document.querySelector('body')
+      body.classList.remove('descanso')
+      body.classList.remove('descanso-largo')
+      body.classList.remove('pomodoro')
+      body.classList.add('descanso-largo')
     }
   }, [botonSeleccionado])
 

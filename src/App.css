@@ -1,30 +1,60 @@
+:root {
+  --pomodoro-color: #081426;
+  --pomodoro-s-color: #091426;
+  --rest-color: #0b5563;
+  --rest-s-color: #0b2930;
+  --large-rest-color: #5f4b66;
+  --large-rest-s-color: #2e2531;
+  --main-color: white;
+  --secondary-color: white;
+}
+
 #root {
   max-width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
 }
+html {
+  padding: 0;
+}
 
 body {
-  margin: 0;
-  display: block;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  color: rgba(255, 255, 255, 0.87);
-  --first-color: #081426;
-  --second-color: #0B5563;
-  --third-color: #5F4B66;
-  background-color: var(--first-color);
-}
-
-
-header {
-  color: #fff;
-  display: block;
-  justify-content: space-between;
-  align-items: center;
+  height: 100vh;
   padding: 0;
-  width: 100%;
+  margin: 0;
+  transition: all 0.3s;
+  background-color: var(--main-color);
+}
+body.pomodoro {
+  --main-color: var(--pomodoro-color);
+  --secondary-color: var(--pomodoro-s-color);
+}
+body.descanso {
+  --main-color: var(--rest-color);
+  --secondary-color: var(--rest-s-color);
+}
+body.descanso-largo {
+  --main-color: var(--large-rest-color);
+  --secondary-color: var(--large-rest-s-color);
+}
+main {
+  display: grid;
+  grid-template-rows: 1fr 11fr;
+  height: 100vh;
+}
+.timer,
+.navbar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  grid-column: 1/6;
+  grid-row: 2/3;
 }
 
+.navbar-section {
+  grid-row: 1/2;
+}

@@ -1,44 +1,40 @@
-.contenedor {
-    height: 45px;
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12rem;
 }
 
-.opciones {
-    display: flex;
-    align-items: center;
+/* Si es en mobile, que sean dos rows en vez de columns */
+@media (max-width: 768px) {
+  .navbar {
     justify-content: space-between;
-    color: whitesmoke;
-    width: 40%; 
-    margin-top: 20px;
-}
-
-.logo{
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    font-size: larger;
-}
-
-.repo{
-    cursor: auto;
-    background-color: #10284c;
-    font-size: small;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    border-radius: 8px;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-weight: bold;
-}
-
-.navbar-line {
-    display: inline-block;
-    background-color: rgba(237, 237, 237, 0.1);
-    height: 1px;
-    width: 40%;
-    margin-bottom: 45px;
+    padding: 1rem;
   }
-  
+}
+
+.logo {
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  font-weight: bold;
+  font-size: larger;
+}
+
+.repo {
+  cursor: auto;
+  background-color: var(--secondary-color);
+  font-size: small;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 8px;
+  transition: all 0.3s;
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+  /* font-weight: bold; */
+}
+
+.repo:hover {
+  transform: scale(1.05);
+  background-color: var(--main-color);
+  border: 1px solid white;
+}
