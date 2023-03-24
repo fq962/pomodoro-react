@@ -5,12 +5,14 @@ import Timer from './components/timer/timer'
 
 function App() {
   return (
-    <div>
-      <header>
+    <main>
+      <section className='navbar-section'>
         <Navbar />
-      </header>
-      <Timer />
-    </div>
+      </section>
+      <section className='timer'>
+        <Timer />
+      </section>
+    </main>
   )
 }
 

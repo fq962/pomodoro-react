@@ -10,15 +10,10 @@ function Navbar() {
   }
   return (
     <div className='navbar'>
-      <div className='contenedor'>
-        <div className='opciones'>
-          <span className='logo'>FERMODORO</span>
-          <button className='repo' onClick={handleRepoClick}>
-            <FontAwesomeIcon icon={faCodeBranch} /> repositorio
-          </button>
-        </div>
-      </div>
-      <div className='navbar-line'></div>
+      <span className='logo'>FERMODORO</span>
+      <button className='repo' onClick={handleRepoClick}>
+        <FontAwesomeIcon icon={faCodeBranch} /> repositorio
+      </button>
     </div>
   )
 }
