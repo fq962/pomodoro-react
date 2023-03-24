@@ -41,9 +41,10 @@ body.descanso-largo {
 main {
   display: grid;
   grid-template-rows: 1fr 11fr;
-  height: 100vh;
+  height: 50vh;
 }
 .timer,
+
 .navbar-section {
   display: flex;
   justify-content: center;
@@ -51,10 +52,24 @@ main {
   height: 100%;
   padding: 0.5rem;
   box-sizing: border-box;
-  grid-column: 1/6;
+  grid-column: 1/12;
   grid-row: 2/3;
 }
 
 .navbar-section {
   grid-row: 1/2;
+  grid-column: 5/8;
+  width: 100%;
 }
+
+/* @media (max-width: 768px) {
+  .navbar-section {
+    
+  }
+
+  main {
+    display: grid;
+    grid-template-rows: 1fr 11fr;
+    height: 50vh;
+  }
+} */

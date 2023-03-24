@@ -9,11 +9,15 @@ function Navbar() {
     window.open(repoURL, '_blank')
   }
   return (
-    <div className='navbar'>
-      <span className='logo'>FERMODORO</span>
-      <button className='repo' onClick={handleRepoClick}>
-        <FontAwesomeIcon icon={faCodeBranch} /> repositorio
-      </button>
+    <div className='nav-principal'>
+      <div className='navbar'>
+        <span className='logo'>FERMODORO</span>
+        <button className='repo' onClick={handleRepoClick}>
+          <FontAwesomeIcon icon={faCodeBranch} />
+          <span className='texto'> repositorio</span>
+        </button>
+      </div>
+      <div className='navbar-line' />
     </div>
   )
 }

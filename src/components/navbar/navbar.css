@@ -1,16 +1,16 @@
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 12rem;
+  justify-content: space-between;
+  width: 100%;
+  /* gap: 1rem; */
 }
 
-/* Si es en mobile, que sean dos rows en vez de columns */
-@media (max-width: 768px) {
-  .navbar {
-    justify-content: space-between;
-    padding: 1rem;
-  }
+.navbar-line {
+  height: 1px;
+  background-color: rgba(237, 237, 237, 0.1);
+  width: 100%;
+  margin-top: 10px;
 }
 
 .logo {
@@ -38,3 +38,39 @@
   background-color: var(--main-color);
   border: 1px solid white;
 }
+
+.nav-principal{
+  display: inline-grid;
+  width: 100%;
+  height: 100%;
+  margin-top: 15px;
+}
+
+
+/* Si es en mobile */
+@media (max-width: 768px) {
+  .navbar-line {
+    height: 0px
+  }
+  
+  .navbar {
+    justify-content: space-between;
+  }
+  /* .nav-principal{
+
+  } */
+
+  /* 
+
+  .repo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .texto {
+    display: none;
+  } */
+}
+
+
