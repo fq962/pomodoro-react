@@ -62,12 +62,28 @@ main {
   width: 100%;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   .navbar-section {
-    
+    width: 100%;
+    grid-column: 2/10; 
   }
 
-  main {
+  main{
+    display: grid;
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  }
+
+  .timer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    grid-column: 1/11;
+  }
+}
+/*  main {
     display: grid;
     grid-template-rows: 1fr 11fr;
     height: 50vh;

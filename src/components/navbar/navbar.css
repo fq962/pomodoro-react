@@ -52,25 +52,14 @@
   .navbar-line {
     height: 0px
   }
-  
+  .texto {
+    display: none;
+  }
   .navbar {
     justify-content: space-between;
   }
-  /* .nav-principal{
-
-  } */
-
-  /* 
-
-  .repo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .nav-principal{
   }
-
-  .texto {
-    display: none;
-  } */
 }
 
 
